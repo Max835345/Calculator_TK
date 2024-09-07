@@ -31,7 +31,13 @@ def bt_clear():
 
 
 root = Tk()
-root.geometry('268x288')
+screen_width = root.winfo_screenwidth()
+screen_height = root.winfo_screenheight()
+window_width = 228
+window_height = 305
+x = (screen_width // 2) - (window_width // 2)
+y = (screen_height // 2) - (window_height // 2)
+root.geometry(f"{window_width}x{window_height}+{x}+{y}")
 root.resizable(0, 0)
 root.title("Калькулятор")
 
